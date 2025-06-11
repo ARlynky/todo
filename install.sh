@@ -23,7 +23,7 @@ cat >"$BIN_DIR/$PROJECT" <<EOF
 cd "$INSTALL_DIR"
 python3 $PROJECT.py "$@"
 EOF
-chmod +x "$BIN_DIR/fortune"
+chmod +x "$BIN_DIR/$PROJECT"
 
 if [[ ":$PATH:" != *":$BIN_DIR:"* ]]; then
   echo "⚠️ Warning: $BIN_DIR is not in your PATH."
