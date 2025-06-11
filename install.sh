@@ -18,10 +18,10 @@ else
   git clone "$REPO_URL" "$INSTALL_DIR"
 fi
 
-cat >"$BIN_DIR/$PROJECT" <<EOF
+cat >"$BIN_DIR/$PROJECT" <<'EOF'
 #!/bin/bash
-cd "$INSTALL_DIR"
-exec python3 "$PROJECT.py" "\$@"
+cd "$HOME/.local/share/todo"
+exec python3 todo.py "$@"
 EOF
 chmod +x "$BIN_DIR/$PROJECT"
 
