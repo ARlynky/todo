@@ -21,7 +21,7 @@ fi
 cat >"$BIN_DIR/$PROJECT" <<EOF
 #!/bin/bash
 cd "$INSTALL_DIR"
-python3 $PROJECT.py "$@"
+exec python3 "$PROJECT.py" "\$@"
 EOF
 chmod +x "$BIN_DIR/$PROJECT"
 
